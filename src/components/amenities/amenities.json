@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_amenities_amenities",
+  "info": {
+    "displayName": "Amenities",
+    "icon": "angle-right"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

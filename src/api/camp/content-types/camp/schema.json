@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "camps",
+  "info": {
+    "singularName": "camp",
+    "pluralName": "camps",
+    "displayName": "Camp",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "contactEmail": {
+      "type": "email"
+    },
+    "contactPhone": {
+      "type": "string"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "slug": {
+      "type": "string"
+    },
+    "cities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::city.city",
+      "inversedBy": "camps"
+    },
+    "amenities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "amenities.amenities"
+    },
+    "about": {
+      "type": "text",
+      "required": true
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "location.location"
+    }
+  }
+}
