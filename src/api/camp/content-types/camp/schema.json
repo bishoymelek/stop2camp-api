@@ -25,11 +25,7 @@
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ]
+      "allowedTypes": ["images", "files", "videos"]
     },
     "slug": {
       "type": "string"
@@ -53,6 +49,11 @@
       "type": "component",
       "repeatable": false,
       "component": "location.location"
+    },
+    "socialLink": {
+      "type": "component",
+      "repeatable": true,
+      "component": "camp.social-media"
     }
   }
 }

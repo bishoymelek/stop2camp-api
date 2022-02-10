@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_camp_social_medias",
+  "info": {
+    "displayName": "social-media",
+    "icon": "sitemap",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": ["Facebook", "Instagram"]
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
