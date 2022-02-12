@@ -1,15 +1,12 @@
-module.exports = ({ env }) => ({
-  upload: {
-    config: {
-      provider: "strapi-provider-upload-do",
+module.exports = ({ env }) => {
+  return {
+    upload: {
+      provider: "cloudinary",
       providerOptions: {
-        key: process.env.DO_SPACE_ACCESS_KEY,
-        secret: process.env.DO_SPACE_SECRET_KEY,
-        endpoint: process.env.DO_SPACE_ENDPOINT,
-        space: process.env.DO_SPACE_BUCKET,
-        directory: process.env.DO_SPACE_DIRECTORY,
-        cdn: process.env.DO_SPACE_CDN,
+        cloud_name: env("CLOUDINARY_NAME"),
+        api_key: env("CLOUDINARY_API_KEY"),
+        api_secret: env("CLOUDINARY_API_SECRET"),
       },
     },
-  },
-});
+  };
+};
